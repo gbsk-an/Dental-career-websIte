@@ -9,6 +9,7 @@ const cleanCSS = require('gulp-clean-css');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 const sass = require('sass');
+const ghPages = require('gh-pages');
 const gulpSass = require('gulp-sass');
 const svgSprite = require('gulp-svg-sprite');
 const svgmin = require('gulp-svgmin');
@@ -50,7 +51,7 @@ const paths = {
   srcPartialsFolder: `${srcFolder}/partials`,
   resourcesFolder: `${srcFolder}/resources`,
 };
-
+const path = require('path');
 let isProd = false; // dev by default
 
 const clean = () => {
@@ -323,6 +324,11 @@ const toProd = (done) => {
   isProd = true;
   done();
 };
+
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+exports.deploy = deploy;
 
 exports.default = series(clean, htmlInclude, scripts, styles, resources, images, webpImages, avifImages, svgSprites, watchFiles);
 
