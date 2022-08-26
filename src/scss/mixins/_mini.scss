@@ -40,9 +40,7 @@ $browser-context: 16; // Default
 
 @mixin image-set($pathToImage) {
   background-image: url("#{$pathToImage}.jpg");
-  /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
   background-image: image-set(
-    /* stylelint-disable-next-line function-comma-newline-after */
     "#{$pathToImage}.avif"type("image/avif"),
     "#{$pathToImage}.webp"type("image/webp"),
     "#{$pathToImage}.jpg"type("image/jpg")
@@ -60,6 +58,12 @@ $browser-context: 16; // Default
     &:not(:last-child) {
         margin-right: $value;
     }
+}
+
+@mixin pr($value) {
+  &:not(:last-child) {
+      padding-right: $value;
+  }
 }
 
 @mixin ml($value) {
@@ -83,4 +87,13 @@ $browser-context: 16; // Default
 @mixin pseudo() {
     content: "";
     display: block;
+}
+
+@mixin p($value, $value2) {
+  margin: 0;
+  color: $neutrals-4;
+  font-family: $Poppins-Regular;
+  font-weight: 400;
+  font-size: $value;
+  line-height: $value2;
 }

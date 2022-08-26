@@ -8,17 +8,8 @@ html {
   box-sizing: inherit;
 }
 
-.page {
-  height: 100%;
-  font-family: var(--font-family, sans-serif);
-  -webkit-text-size-adjust: 100%;
-}
-
-.page__body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100%;
-  font-size: 16px;
+body {
+  background-color: $neutrals-0;
 }
 
 img {
@@ -31,12 +22,45 @@ a {
   text-decoration: none;
 }
 
-.site-container {
-  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+.wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
 }
 
-.is-hidden {
-  display: none !important; /* stylelint-disable-line declaration-no-important */
+h1 {
+  margin: 0;
+  color: $neutrals-1;
+  font-family: $Poppins-SemiBold;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 73px;
+}
+
+h2 {
+  margin: 0;
+  color: $neutrals-1;
+  font-family: $Poppins-SemiBold;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 65px;
+}
+
+h3 {
+  margin: 0;
+  color: $neutrals-3;
+  font-family: $Poppins-Medium;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 48px;
+}
+
+p {
+  margin: 0;
+  color: $neutrals-4;
+  font-family: $Poppins-Regular;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
 }
 
 .btn-reset {
@@ -57,7 +81,6 @@ a {
   appearance: none;
   border: none;
   border-radius: 0;
-  background-color: #fff;
 
   &::-webkit-search-decoration,
   &::-webkit-search-cancel-button,
@@ -76,12 +99,6 @@ a {
   width: 1px;
   height: 1px;
   clip: rect(0 0 0 0);
-}
-
-.container {
-  margin: 0 auto;
-  padding: 0 var(--container-offset);
-  max-width: var(--container-width);
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -103,5 +120,4 @@ a {
 }
 
 .page--ios .dis-scroll {
-  position: relative;
-}
+  position: relative;}
