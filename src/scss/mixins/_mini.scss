@@ -108,3 +108,12 @@ $browser-context: 16; // Default
   font-size: $value;
   line-height: $value2;
 }
+
+@mixin p-bold($value, $value2) {
+  margin: 0;
+  color: $neutrals-4;
+  font-family: $Poppins-SemiBold;
+  font-weight: 600;
+  font-size: $value;
+  line-height: $value2;
+}
