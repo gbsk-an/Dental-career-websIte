@@ -58,17 +58,3 @@
     }
   }
 }
-.reset-password {
-  @include p(14px, 18px);
-
-  margin-top: 1.4em;
-  width: 100%;
-  text-align: right;
-  &__link {
-    color: $neutrals-4;
-    transition: 0.3s;
-    &:hover {
-      color: $primary-1;
-    }
-  }
-}

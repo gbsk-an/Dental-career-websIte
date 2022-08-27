@@ -51,7 +51,6 @@ const paths = {
   srcPartialsFolder: `${srcFolder}/partials`,
   resourcesFolder: `${srcFolder}/resources`,
 };
-const path = require('path');
 let isProd = false; // dev by default
 
 const clean = () => {

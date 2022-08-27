@@ -23,8 +23,12 @@ a {
 }
 
 .wrapper {
-  max-width: 1180px;
+  max-width: 1200px;
   margin: 0 auto;
+
+  @include small-tablet {
+    max-width: 600px;
+  }
 }
 
 h1 {

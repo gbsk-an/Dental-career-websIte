@@ -1,0 +1,96 @@
+.intro_block {
+  @include grid;
+
+  position: relative;
+  background-image: url('../img/background-1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__text {
+    margin-top: 5em;
+    margin-bottom: 9.75em;
+
+    grid-column: 2 / span 5;
+
+    @include small-tablet {
+      grid-column: 1 / span 4;
+      margin-left: 1.5em;
+      margin-bottom: 5em;
+    }
+  }
+
+  &--text {
+    @include p(24px, 74px);
+    margin-bottom: 1em;
+    padding-left: 1.6em;
+
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 32px;
+      background-image: url('../img/svg/element_01.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    @include small-tablet {
+      line-height: 28px;
+    }
+
+  }
+
+  &__image {
+    position: absolute;
+    transform: translateY(0);
+    right: calc(50% - 500px);
+    z-index: 0;
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &--btn1 {
+    @include p(14px, 21px);
+
+    padding: .7em 1em;
+    border-radius: 10px;
+    background-color: $neutrals-1;
+  }
+
+  &--btn2 {
+    @include p(14px, 21px);
+
+    padding: .7em 1em;
+    color: $neutrals-1;
+  }
+}
+
+.intro {
+  position: relative;
+
+  &__ellipse--01 {
+    position: absolute;
+    top: 13em;
+    left: 10em;
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__ellipse--02 {
+    position: absolute;
+    top: 10px;
+    right: 11em;
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+}
