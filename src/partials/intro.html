@@ -15,11 +15,21 @@
       <section class="search-section">
         <div class="search-section__block">
           <p class="search-section__title">Location</p>
-          <p class="search-section__select">Select Your City</p>
+          <input class="input-reset search-section__select" type="text" name="city" list="cityname" placeholder="Select Your City">
+          <datalist id="cityname">
+            <option value="Boston">
+            <option value="Cambridge">
+            <option value="New York">
+          </datalist>
         </div>
         <div class="search-section__block">
           <p class="search-section__title">Title</p>
-          <p class="search-section__choose">Choose job role</p>
+          <input class="input-reset search-section__choose" type="text" name="job" list="role" placeholder="Choose job role">
+          <datalist id="role">
+            <option value="Doctor">
+            <option value="Student">
+            <option value="Dental">
+          </datalist>
         </div>
         <div class="search-section__block">
           <button type="button" class="btn-reset search-section__block--btn">Search</button>

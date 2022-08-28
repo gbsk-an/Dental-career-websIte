@@ -12,8 +12,16 @@
   background-color: $neutrals-1;
   box-shadow: $shadow-1;
 
+  @include small-tablet {
+    max-width: 600px;
+    padding: .8em;
+  }
+
   &__block {
-    @include mr(2em);
+    @include mr(3em);
+    @include small-tablet {
+      @include mr(0);
+    }
 
     &--btn {
       @include p-bold(18px, 36px);
@@ -47,13 +55,14 @@
   &__select {
     @include p(16px, 36px);
     position: relative;
-    padding-right: 2.8em;
+    background-color: transparent;
     color: $neutrals-2;
 
-    &::after {
+
+    &:after {
       content: '';
       position: absolute;
-      width: 12px;
+      width: 13px;
       height: 16px;
       background-image: url('../img/svg/location_01.svg');
       background-repeat: no-repeat;
@@ -68,14 +77,14 @@
   &__choose {
     @include p(16px, 36px);
     position: relative;
-    padding-right: 1.8em;
+    background-color: transparent;
     color: $neutrals-2;
 
     &::after {
       content: '';
       position: absolute;
       width: 12px;
-      height: 6px;
+      height: 8px;
       background-image: url('../img/svg/arrow_down.svg');
       background-repeat: no-repeat;
       background-position: center;
