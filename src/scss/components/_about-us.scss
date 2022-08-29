@@ -1,0 +1,59 @@
+.about {
+  @include bg-cover;
+
+  position: relative;
+  margin-bottom: 5em;
+  border-radius: 15px;
+  background-image: url('../img/background_2.png');
+  &__grid {
+    @include grid;
+  }
+  &__info {
+    @include p(20px, 32px);
+
+    grid-column: 2 / span 10;
+    margin-top: 4.5em;
+    margin-bottom: 4.5em;
+    color: $neutrals-1;
+    @include small-tablet {
+      grid-column: span 6;
+      text-align: justify;
+    }
+  }
+
+  &__btns {
+    grid-column: 6 / span 2;
+    margin-bottom: 2.7em;
+
+    @include small-tablet {
+      grid-column: 1 / span 2;
+    }
+
+    &--btn {
+      @include p-med(18px, 36px);
+
+      padding: .5em 1.5em;
+      border-radius: 10px;
+      background-color: $neutrals-1;
+    }
+  }
+  &__ellipse--01 {
+    position: absolute;
+    top: -4em;
+    left: -4em;
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__ellipse--02 {
+    position: absolute;
+    top: 15em;
+    right: -4em;
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+}

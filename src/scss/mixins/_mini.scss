@@ -109,6 +109,15 @@ $browser-context: 16; // Default
   line-height: $value2;
 }
 
+@mixin p-med($value, $value2) {
+  margin: 0;
+  color: $neutrals-4;
+  font-family: $Poppins-Medium;
+  font-weight: 500;
+  font-size: $value;
+  line-height: $value2;
+}
+
 @mixin p-bold($value, $value2) {
   margin: 0;
   color: $neutrals-4;
