@@ -1,0 +1,60 @@
+.featured-jobs {
+  margin-bottom: 5em;
+  &__title {
+    margin-bottom: 1.15em;
+    text-align: center;
+  }
+  &__grid {
+    @include grid;
+  }
+  &__item {
+    @include flex-all-sb;
+    @include mb(2.3em);
+    grid-column: 12 span;
+    padding: 2.4em 1.8em;
+    border-radius: $radius;
+    background-color: $neutrals-1;
+    box-shadow: $shadow-1;
+  }
+  &__job {
+    @include p(20px, 30px);
+  }
+  &__work {
+    position: relative;
+    padding-right: 3em;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      background-image: url('../img/svg/location_02.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+  }
+
+  &__btns {
+    &--apply {
+      @include p(16px, 36px);
+
+      margin-right: 2.6em;
+      padding: .4em 1.6em;
+      border-radius: $radius;
+      background-color: $primary-1;
+      color: $neutrals-1;
+    }
+    &--details {
+      @include p(15px, 36px);
+
+      padding: .4em 1.6em;
+      border-radius: $radius;
+      border: 1px solid $neutrals-4;
+      background-color: transparent;
+    }
+  }
+}

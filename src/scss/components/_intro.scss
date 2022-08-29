@@ -59,7 +59,7 @@
     @include p(14px, 21px);
 
     padding: .7em 1em;
-    border-radius: 10px;
+    border-radius: $radius;
     background-color: $neutrals-1;
   }
 
@@ -86,7 +86,7 @@
 
   &__ellipse--02 {
     position: absolute;
-    top: 10px;
+    top: $radius;
     right: 11em;
 
     @include small-tablet {

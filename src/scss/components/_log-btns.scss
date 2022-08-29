@@ -14,7 +14,7 @@
       padding: 0.6em 1.8em;
       flex-basis: calc(50% - 2em);
       background-color: $primary-1;
-      border-radius: 10px;
+      border-radius: $radius;
       color: $neutrals-1;
       font-family: $Poppins-Regular;
       font-weight: 400;
@@ -28,7 +28,7 @@
     margin: 0;
     padding: 0.6em 1.8em;
     background-color: $neutrals-4;
-    border-radius: 10px;
+    border-radius: $radius;
     color: $neutrals-1;
     font-family: $Poppins-Regular;
     font-weight: 400;

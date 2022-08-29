@@ -11,7 +11,7 @@
   }
   position: relative;
   border: 1px solid $neutrals-2;
-  border-radius: 10px;
+  border-radius: $radius;
   width: 44px;
   height: 44px;
 
@@ -43,7 +43,7 @@
   right: 3em;
   top: 3em;
   border: 1px solid $neutrals-4;
-  border-radius: 10px;
+  border-radius: $radius;
   width: 44px;
   height: 44px;
   background-image: url("../img/svg/close.svg");

@@ -1,5 +1,5 @@
 .hiw {
-  margin-bottom: 2.6em;
+  margin-bottom: 5em;
   &__title {
     text-align: center;
     margin-bottom: 2.5em;
@@ -18,7 +18,7 @@
     }
     &--square {
       margin-right: .4em;
-      border-radius: 10px;
+      border-radius: $radius;
       width: 3.5em;
       height: 3.5em;
       @include small-tablet {
