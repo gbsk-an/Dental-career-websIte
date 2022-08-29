@@ -1,0 +1,73 @@
+.hiw {
+  margin-bottom: 2.6em;
+  &__title {
+    text-align: center;
+    margin-bottom: 2.5em;
+    @include small-tablet {
+      margin-bottom: 1.4em;
+    }
+  }
+
+  &__block {
+    @include flex-all-sb;
+
+    &--item {
+      @include flex-all-center;
+
+      overflow: hidden;
+    }
+    &--square {
+      margin-right: .4em;
+      border-radius: 10px;
+      width: 3.5em;
+      height: 3.5em;
+      @include small-tablet {
+
+      }
+    }
+    .square-file {
+      background-image: url('../img/svg/file.svg');
+      background-repeat: no-repeat;
+    }
+    .square-loop {
+      background-image: url('../img/svg/loop.svg');
+      background-repeat: no-repeat;
+    }
+    .square-apply {
+      background-image: url('../img/svg/apply.svg');
+      background-repeat: no-repeat;
+    }
+    &__text {
+      &--title {
+        @include p-bold(20px, 30px);
+      }
+      &--description {
+        @include p(13px, 17px);
+      }
+    }
+  }
+}
+
+.swiper-wrapper {
+  width: fit-content;
+}
+
+.hiw__btns {
+  @include flex-all-center;
+
+}
+.hiw__slider-btn {
+  @include bg-cover;
+
+  width: 32px;
+  height: 32px;
+  margin-top: .8em;
+  &--prev {
+      margin-right: 2em;
+      background-image: url('../img/svg/arrow-left.svg');
+  }
+
+  &--next {
+      background-image: url('../img/svg/arrow-right.svg');
+  }
+}

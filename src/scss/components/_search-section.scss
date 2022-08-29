@@ -5,7 +5,8 @@
 .search-section {
   @include flex-all-sb;
 
-  margin: -3em ;
+  margin-top: -3em ;
+  margin-bottom: 7em;
   padding: .8em 2.3em 1.25em 3.3em;
   width: fit-content;
   border-radius: 20px;
