@@ -6,6 +6,9 @@
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
+  @include small-tablet {
+    background-image: none;
+  }
   &__text {
     margin-top: 5em;
     margin-bottom: 9.75em;
@@ -73,7 +76,13 @@
 
 .intro {
   position: relative;
-
+  @include small-tablet {
+    border-radius: 15px;
+    background-image: url('../img/background-1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
   &__ellipse--01 {
     position: absolute;
     top: 13em;

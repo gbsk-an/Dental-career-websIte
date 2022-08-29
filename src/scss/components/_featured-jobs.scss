@@ -15,6 +15,10 @@
     border-radius: $radius;
     background-color: $neutrals-1;
     box-shadow: $shadow-1;
+    @include small-tablet {
+      grid-column: span 6;
+      padding: 1.4em .8em;
+    }
   }
   &__job {
     @include p(20px, 30px);
@@ -22,6 +26,9 @@
   &__work {
     position: relative;
     padding-right: 3em;
+    @include small-tablet {
+      padding-right: 2em;
+    }
 
     &::after {
       content: '';
@@ -39,6 +46,10 @@
   }
 
   &__btns {
+    @include small-tablet {
+      display: flex;
+      flex-direction: column;
+    }
     &--apply {
       @include p(16px, 36px);
 
@@ -47,6 +58,10 @@
       border-radius: $radius;
       background-color: $primary-1;
       color: $neutrals-1;
+      @include small-tablet {
+        margin: 0 0 1.4em 0;
+        padding: .4em .6em;
+      }
     }
     &--details {
       @include p(15px, 36px);

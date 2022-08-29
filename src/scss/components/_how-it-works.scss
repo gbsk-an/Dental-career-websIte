@@ -1,5 +1,8 @@
 .hiw {
   margin-bottom: 5em;
+  @include small-tablet {
+    margin-top: 3em;
+  }
   &__title {
     text-align: center;
     margin-bottom: 2.5em;
