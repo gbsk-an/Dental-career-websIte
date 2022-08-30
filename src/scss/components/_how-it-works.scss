@@ -24,9 +24,6 @@
       border-radius: $radius;
       width: 3.5em;
       height: 3.5em;
-      @include small-tablet {
-
-      }
     }
     .square-file {
       background-image: url('../img/svg/file.svg');

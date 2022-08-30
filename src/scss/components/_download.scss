@@ -1,0 +1,52 @@
+.download {
+  margin-bottom: 5em;
+
+  &__container {
+    @include grid;
+    @include bg-cover;
+
+    border-radius: 35px;
+    background-image: url("../img/background_3.png");
+
+    &--title {
+      grid-column: 3 / span 8;
+      padding: 1.9em 0 1.3em;
+      text-align: center;
+      @include small-tablet {
+        grid-column: span 6;
+      }
+    }
+    &--btns {
+      grid-column: 6 / span 6;
+      margin-bottom: 5em;
+      @include small-tablet {
+        grid-column: span 6;
+
+      }
+
+
+      &--download {
+        @include p-med(18px, 27px);
+
+        margin-right: 2.7em;
+        padding: 1.3em 3.2em;
+        border-radius: 90px;
+        background-color: $neutrals-1;
+        color: $primary-1;
+        @include small-tablet {
+          margin-right: 1em;
+          margin-left: 3em
+        }
+      }
+      &--about {
+        @include p-med(18px, 27px);
+
+        padding: 1.3em 3.2em;
+        border-radius: 90px;
+        border: 1px solid $neutrals-1;
+        background-color: transparent;
+        color: $neutrals-1;
+      }
+    }
+  }
+}

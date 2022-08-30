@@ -1,0 +1,27 @@
+.employees {
+  margin-bottom: 9.5em;
+  &__title {
+    margin-bottom: 2em;
+    text-align: center;
+  }
+
+  &__flex {
+    @include flex-all-sb;
+
+    gap: 2.6em;
+    flex-wrap: wrap;
+    @include small-tablet {
+      gap: 1em;
+      flex-wrap: wrap;
+    }
+
+    &--item {
+      &--pic {
+        @include small-tablet {
+          width: 214px;
+          height: 49px;
+        }
+      }
+    }
+  }
+}
