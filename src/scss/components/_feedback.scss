@@ -1,22 +1,31 @@
 .feedback {
   margin-bottom: 5em;
 
-
   &__title {
     margin-bottom: 2em;
     text-align: center;
   }
   &__container {
-
     @include flex-all-sb;
-    gap: 6.8em;
 
     border-radius: 20px;
     background-color: $neutrals-1;
     box-shadow: $shadow-1;
     &--item {
       overflow: hidden;
+      margin-right: 4em;
+    }
+    &--item1 {
+      @include small-tablet {
+        display: none;
+      }
+    }
+    &--item2 {
+      position: relative;
       width: 600px;
+      &--flex {
+        @include flex-all-sb;
+      }
     }
     &__block {
       margin: 3.8em 0 0 2em;
@@ -31,18 +40,20 @@
     }
     &__quotes {
       padding: 3.1em 2.1em;
-
+      &:first-child {
+        margin-left: 2em;
+      }
       &--text {
         @include p(18px, 32px);
 
         position: relative;
 
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           width: 47px;
           height: 47px;
-          background-image: url('../img/svg/quote_left.svg');
+          background-image: url("../img/svg/quote_left.svg");
           background-repeat: no-repeat;
           background-position: center;
           left: -3em;
@@ -64,71 +75,29 @@
       }
     }
   }
-
 }
-
-.hiw__slider-bt {
+.feedback__block {
+  @include flex-all-center;
+}
+.feedback__slider-bt {
   @include bg-cover;
 
   width: 32px;
   height: 32px;
-  margin-top: .8em;
+  margin-top: 0.8em;
+  background-color: $primary-1;
+  border-radius: 50%;
   &--prev {
-      margin-right: 2em;
-      background-image: url('../img/svg/arrow-left.svg');
+    position: absolute;
+    top: 14em;
+    left: 1em;
+    background-image: url("../img/svg/arrow-left.svg");
   }
 
   &--next {
-      background-image: url('../img/svg/arrow-right.svg');
+    position: absolute;
+    top: 14em;
+    right: 0;
+    background-image: url("../img/svg/arrow-right.svg");
   }
-}
-
-.flexg {
-  @include flex-all-sb;
-
-}
-I found a solution, I feel like it's a bit of a hack, however. For what it's worth, here it is:
-
-.swiper-container {
-  overflow: visible;
-}
-$slide: ".swiper-slide";
-.swiper-slide {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out;
-  &-active {
-    opacity: 1;
-    visibility: visible;
-
-    @for $i from 1 through 3 {
-      & + #{$slide} {
-        opacity: 1;
-        visibility: visible;
-      }
-      $slide: "#{$slide} + .swiper-slide";
-    }
-  }
-}
-
-.swiper-slide {
-  opacity: 0;
-  visibility: hidden;
-  transition: 200ms ease-in-out;
-}
-.swiper-slide-active {
-  opacity: 1;
-  visibility: visible;
-}
-.swiper-slide-active + .swiper-slide {
-  opacity: 1;
-  visibility: visible;
-}
-.swiper-slide-active + .swiper-slide + .swiper-slide {
-  opacity: 1;
-  visibility: visible;
-}
-.swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide {
-  opacity: 1;
-  visibility: visible;
 }

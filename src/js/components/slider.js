@@ -20,7 +20,7 @@ let swiper2 = new Swiper(slider2, {
   loop: false,
   speed: 600,
   navigation: {
-    nextEl: '.hiw__slider-bt--next',
-    prevEl: '.hiw__slider-bt--prev',
+    nextEl: '.feedback__slider-bt--next',
+    prevEl: '.feedback__slider-bt--prev',
   },
 });

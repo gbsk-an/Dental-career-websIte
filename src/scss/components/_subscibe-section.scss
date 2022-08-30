@@ -1,0 +1,45 @@
+.subscibe__section {
+  @include flex-all-center;
+  z-index: 1;
+
+}
+.email-section{
+  @include flex-all-sb;
+
+    gap: 5em;
+    margin-top: -3em ;
+    margin-bottom: 7em;
+    padding: .8em 2.3em 1.25em 3.3em;
+    width: fit-content;
+    border-radius: 20px;
+    background-color: $neutrals-1;
+    box-shadow: $shadow-1;
+
+    @include small-tablet {
+      max-width: 600px;
+      padding: .8em;
+    }
+
+    &__input {
+      &--el {
+        @include p(18px, 27px);
+
+        padding: .7em;
+        border: none;
+        outline: none;
+      }
+    }
+
+    &__btn {
+      padding: 1.6em 2em;
+      border-radius: $radius;
+      background-color: $primary-1;
+
+      &--el {
+        @include p-bold(16px, 24px);
+
+        color: $neutrals-1;
+        letter-spacing: 0.16em;
+      }
+    }
+}
