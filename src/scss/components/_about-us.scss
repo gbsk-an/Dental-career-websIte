@@ -28,6 +28,9 @@
     @include small-tablet {
       grid-column: 1 / span 2;
     }
+    @include tablet {
+      grid-column: 6 / span 3;
+    }
 
     &--btn {
       @include p-med(18px, 36px);

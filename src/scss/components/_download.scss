@@ -43,6 +43,9 @@
         @include mobile {
           padding: 1em;
         }
+        @include tablet {
+          padding: 1.3em 2.2em;
+        }
       }
       &--about {
         @include p-med(18px, 27px);
@@ -54,6 +57,9 @@
         color: $neutrals-1;
         @include mobile {
           padding: 1em;
+        }
+        @include tablet {
+          padding: 1.3em 2.2em;
         }
       }
     }
