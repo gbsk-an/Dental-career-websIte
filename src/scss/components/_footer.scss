@@ -1,0 +1,54 @@
+.footer {
+  margin-bottom: 2em;
+  &__container {
+    @include grid;
+
+  }
+
+
+  &__item {
+    grid-column: span 3;
+    @include small-tablet {
+      grid-column: span 2;
+    }
+    &:first-child {
+     padding-top: 3em;
+     @include small-tablet {
+      grid-column: span 6;
+      padding: 0 0 2em;
+     }
+    }
+    &--logo {
+      @include flex-all-center;
+
+      margin-bottom: 2.1em;
+      @include small-tablet {
+        display: none;
+      }
+    }
+    &--socials {
+      @include flex;
+      justify-content: space-evenly;
+      @include small-tablet {
+        justify-content: flex-start;
+        gap: 2em;
+      }
+    }
+  }
+
+  &__nav {
+    &--item {
+      @include p(16px, 33px);
+      @include mb(1em);
+      &:first-child {
+        @include p-med(24px, 34px);
+
+        margin-bottom: 1.2em;
+      }
+    }
+
+    &--link {
+      color: $neutrals-4;
+    }
+  }
+}
