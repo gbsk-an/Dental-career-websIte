@@ -1,5 +1,10 @@
 .download {
   margin-bottom: 5em;
+  @include mobile {
+    @include bg-cover;
+    background-image: url("../img/background_3.png");
+    border-radius: 35px;
+  }
 
   &__container {
     @include grid;
@@ -7,7 +12,10 @@
 
     border-radius: 35px;
     background-image: url("../img/background_3.png");
-
+    @include mobile {
+      border-radius: 0;
+      background-image: none;
+    }
     &--title {
       grid-column: 3 / span 8;
       padding: 1.9em 0 1.3em;
@@ -19,23 +27,21 @@
     &--btns {
       grid-column: 6 / span 6;
       margin-bottom: 5em;
+      display: flex;
+      justify-content: space-evenly;
       @include small-tablet {
         grid-column: span 6;
-
       }
-
 
       &--download {
         @include p-med(18px, 27px);
 
-        margin-right: 2.7em;
         padding: 1.3em 3.2em;
         border-radius: 90px;
         background-color: $neutrals-1;
         color: $primary-1;
-        @include small-tablet {
-          margin-right: 1em;
-          margin-left: 3em
+        @include mobile {
+          padding: 1em;
         }
       }
       &--about {
@@ -46,6 +52,9 @@
         border: 1px solid $neutrals-1;
         background-color: transparent;
         color: $neutrals-1;
+        @include mobile {
+          padding: 1em;
+        }
       }
     }
   }

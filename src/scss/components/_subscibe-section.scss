@@ -34,6 +34,9 @@
       padding: 1.6em 2em;
       border-radius: $radius;
       background-color: $primary-1;
+      @include mobile {
+        padding: 0.6em 1em;
+      }
 
       &--el {
         @include p-bold(16px, 24px);

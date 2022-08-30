@@ -1,6 +1,11 @@
 .search_block {
   @include flex-all-center;
   z-index: 1;
+
+
+  @include mobile {
+  padding-bottom: 3em;
+  }
 }
 .search-section {
   @include flex-all-sb;
@@ -16,6 +21,13 @@
   @include small-tablet {
     max-width: 600px;
     padding: .8em;
+  }
+  @include mobile {
+    flex-wrap: wrap;
+    gap: 2em;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
   }
 
   &__block {

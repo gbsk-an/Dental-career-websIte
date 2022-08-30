@@ -1,5 +1,9 @@
 .subscibe {
   margin-bottom: 5em;
+
+  @include mobile {
+    margin-bottom: 2em;
+  }
   &__container {
     @include grid;
 
@@ -15,6 +19,9 @@
     @include small-tablet {
       grid-column: span 6;
     }
+    @include mobile {
+      padding-top: 0.9em;
+    }
 
   }
 
@@ -27,6 +34,9 @@
     letter-spacing: 0.01em;
     @include small-tablet {
       grid-column: span 6;
+    }
+    @include mobile {
+      padding-bottom: 6em;
     }
   }
 }
