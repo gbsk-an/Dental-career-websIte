@@ -5,10 +5,14 @@
   @include big-desktop {
     display: none;
   }
+  @include tablet {
+    display: none;
+  }
   @include small-tablet {
     display: block;
     margin-right: 1em;
   }
+
   position: relative;
   border: 1px solid $neutrals-2;
   border-radius: $radius;
@@ -55,6 +59,9 @@
     display: none;
   }
   @include big-desktop {
+    display: none;
+  }
+  @include tablet {
     display: none;
   }
   @include small-tablet {

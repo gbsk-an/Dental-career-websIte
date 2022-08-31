@@ -48,21 +48,26 @@
     @include small-tablet {
       line-height: 28px;
     }
+    @include tablet {
+      line-height: 33px;
+    }
 
   }
 
   &__image {
     position: absolute;
     transform: translateY(0);
+    top: calc(100% - 500px);
     right: calc(50% - 500px);
     z-index: 0;
     @include small-tablet {
       display: none;
     }
-  }
-  @include tablet {
+     @include tablet {
     display: none;
+    }
   }
+
 
   &--btn1 {
     @include p(14px, 21px);
