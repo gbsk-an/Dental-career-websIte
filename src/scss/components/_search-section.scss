@@ -2,17 +2,16 @@
   @include flex-all-center;
   z-index: 1;
 
-
   @include mobile {
-  padding-bottom: 3em;
+    padding-bottom: 3em;
   }
 }
 .search-section {
   @include flex-all-sb;
 
-  margin-top: -3em ;
+  margin-top: -3em;
   margin-bottom: 7em;
-  padding: .8em 2.3em 1.25em 3.3em;
+  padding: 0.8em 2.3em 1.25em 3.3em;
   width: fit-content;
   border-radius: 20px;
   background-color: $neutrals-1;
@@ -21,7 +20,7 @@
 
   @include small-tablet {
     max-width: 600px;
-    padding: .8em;
+    padding: 0.8em;
   }
   @include mobile {
     flex-wrap: wrap;
@@ -40,17 +39,17 @@
       @include p-bold(18px, 36px);
 
       position: relative;
-      padding: .8em 3em .5em 1.4em;
+      padding: 0.8em 3em 0.5em 1.4em;
       border-radius: $radius;
       background-color: $primary-1;
       color: $neutrals-1;
       text-transform: uppercase;
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         width: 21px;
         height: 21px;
-        background-image: url('../img/svg/search-btn.svg');
+        background-image: url("../img/svg/search-btn.svg");
         background-repeat: no-repeat;
         background-position: center;
         right: 15px;
@@ -62,8 +61,6 @@
   }
   &__title {
     @include p-bold(18px, 36px);
-
-
   }
   &__select {
     @include p(16px, 36px);
@@ -71,13 +68,12 @@
     background-color: transparent;
     color: $neutrals-2;
 
-
     &:after {
-      content: '';
+      content: "";
       position: absolute;
       width: 13px;
       height: 16px;
-      background-image: url('../img/svg/location_01.svg');
+      background-image: url("../img/svg/location_01.svg");
       background-repeat: no-repeat;
       background-position: center;
       right: 0;
@@ -94,11 +90,11 @@
     color: $neutrals-2;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       width: 12px;
       height: 8px;
-      background-image: url('../img/svg/arrow_down.svg');
+      background-image: url("../img/svg/arrow_down.svg");
       background-repeat: no-repeat;
       background-position: center;
       right: 0;

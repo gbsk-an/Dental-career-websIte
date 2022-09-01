@@ -2,9 +2,7 @@
   margin-bottom: 2em;
   &__container {
     @include grid;
-
   }
-
 
   &__item {
     grid-column: span 3;
@@ -12,11 +10,11 @@
       grid-column: span 2;
     }
     &:first-child {
-     padding-top: 3em;
-     @include small-tablet {
-      grid-column: span 6;
-      padding: 0 0 2em;
-     }
+      padding-top: 3em;
+      @include small-tablet {
+        grid-column: span 6;
+        padding: 0 0 2em;
+      }
     }
     &--logo {
       @include flex-all-center;

@@ -15,14 +15,13 @@
   &__title {
     grid-column: 4 / span 6;
     padding-top: 1.9em;
-    padding-bottom: .8em;
+    padding-bottom: 0.8em;
     @include small-tablet {
       grid-column: span 6;
     }
     @include mobile {
       padding-top: 0.9em;
     }
-
   }
 
   &__text {

@@ -20,21 +20,21 @@
       overflow: hidden;
     }
     &--square {
-      margin-right: .4em;
+      margin-right: 0.4em;
       border-radius: $radius;
       width: 3.5em;
       height: 3.5em;
     }
     .square-file {
-      background-image: url('../img/svg/file.svg');
+      background-image: url("../img/svg/file.svg");
       background-repeat: no-repeat;
     }
     .square-loop {
-      background-image: url('../img/svg/loop.svg');
+      background-image: url("../img/svg/loop.svg");
       background-repeat: no-repeat;
     }
     .square-apply {
-      background-image: url('../img/svg/apply.svg');
+      background-image: url("../img/svg/apply.svg");
       background-repeat: no-repeat;
     }
     &__text {
@@ -54,20 +54,19 @@
 
 .hiw__btns {
   @include flex-all-center;
-
 }
 .hiw__slider-btn {
   @include bg-cover;
 
   width: 32px;
   height: 32px;
-  margin-top: .8em;
+  margin-top: 0.8em;
   &--prev {
-      margin-right: 2em;
-      background-image: url('../img/svg/arrow-left.svg');
+    margin-right: 2em;
+    background-image: url("../img/svg/arrow-left.svg");
   }
 
   &--next {
-      background-image: url('../img/svg/arrow-right.svg');
+    background-image: url("../img/svg/arrow-right.svg");
   }
 }

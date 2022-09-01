@@ -52,8 +52,8 @@ h1 {
   font-size: 60px;
   line-height: 73px;
   @include mobile {
-  font-size: 54px;
-  line-height: 66px;
+    font-size: 54px;
+    line-height: 66px;
   }
 }
 
@@ -155,7 +155,7 @@ p {
   position: relative;
 }
 
-input[type=text]::-webkit-calendar-picker-indicator  {
+input[type="text"]::-webkit-calendar-picker-indicator {
   -webkit-appearance: none;
   display: none;
 }

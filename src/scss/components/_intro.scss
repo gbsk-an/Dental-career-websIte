@@ -2,7 +2,7 @@
   @include grid;
 
   position: relative;
-  background-image: url('../img/background-1.png');
+  background-image: url("../img/background-1.png");
   background-size: cover;
   background-repeat: no-repeat;
   @include small-tablet {
@@ -32,11 +32,11 @@
 
     position: relative;
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       width: 20px;
       height: 32px;
-      background-image: url('../img/svg/element_01.svg');
+      background-image: url("../img/svg/element_01.svg");
       background-repeat: no-repeat;
       background-position: center;
       left: 0;
@@ -51,7 +51,6 @@
     @include tablet {
       line-height: 33px;
     }
-
   }
 
   &__image {
@@ -63,16 +62,15 @@
     @include small-tablet {
       display: none;
     }
-     @include tablet {
-    display: none;
+    @include tablet {
+      display: none;
     }
   }
-
 
   &--btn1 {
     @include p(14px, 21px);
 
-    padding: .7em 1em;
+    padding: 0.7em 1em;
     border-radius: $radius;
     background-color: $neutrals-1;
   }
@@ -80,16 +78,15 @@
   &--btn2 {
     @include p(14px, 21px);
 
-    padding: .7em 1em;
+    padding: 0.7em 1em;
     color: $neutrals-1;
   }
 }
 
 .intro {
-
   @include small-tablet {
     border-radius: 15px;
-    background-image: url('../img/background-1.png');
+    background-image: url("../img/background-1.png");
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
