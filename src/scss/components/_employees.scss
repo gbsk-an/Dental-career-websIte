@@ -1,5 +1,10 @@
 .employees {
   margin-bottom: 9.5em;
+
+  @include mobile-min {
+    margin-bottom: 5em;
+  }
+
   &__title {
     margin-bottom: 2em;
     text-align: center;
@@ -13,6 +18,9 @@
     @include small-tablet {
       gap: 1em;
       flex-wrap: wrap;
+    }
+    @include mobile-min {
+      justify-content: center;
     }
 
     &--item {

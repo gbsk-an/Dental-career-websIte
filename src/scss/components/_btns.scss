@@ -1,0 +1,61 @@
+.btn_create-resume {
+  @include p(14px, 21px);
+
+  padding: 0.7em 1em;
+  border-radius: $radius;
+  background-color: $neutrals-1;
+}
+
+.btn_watch-demo {
+  @include p(14px, 21px);
+
+  padding: 0.7em 1em;
+  color: $neutrals-1;
+}
+
+.btn_search {
+  @include p-bold(18px, 36px);
+
+  position: relative;
+  padding: 0.8em 3em 0.5em 1.4em;
+  border-radius: $radius;
+  background-color: $primary-1;
+  color: $neutrals-1;
+  text-transform: uppercase;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    background-image: url("../img/svg/search-btn.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+}
+
+.btn_apply {
+  @include p(16px, 36px);
+
+  margin-right: 2.6em;
+  padding: 0.4em 1.6em;
+  border-radius: $radius;
+  background-color: $primary-1;
+  color: $neutrals-1;
+  @include small-tablet {
+    margin: 0 0 1.4em 0;
+    padding: 0.4em 0.6em;
+  }
+}
+
+.btn_details {
+  @include p(15px, 36px);
+
+  padding: 0.4em 1.6em;
+  border-radius: $radius;
+  border: 1px solid $neutrals-4;
+  background-color: transparent;
+}

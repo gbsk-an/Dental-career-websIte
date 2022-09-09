@@ -3,6 +3,9 @@
   &__title {
     margin-bottom: 1.15em;
     text-align: center;
+    @include mobile-min {
+      background-color: $primary-1;
+    }
   }
   &__grid {
     @include grid;
@@ -18,6 +21,11 @@
     @include small-tablet {
       grid-column: span 6;
       padding: 1.4em 0.8em;
+    }
+
+    @include mobile-min {
+      flex-direction: column;
+      gap: 3em
     }
   }
   &__job {
@@ -49,27 +57,6 @@
     @include small-tablet {
       display: flex;
       flex-direction: column;
-    }
-    &--apply {
-      @include p(16px, 36px);
-
-      margin-right: 2.6em;
-      padding: 0.4em 1.6em;
-      border-radius: $radius;
-      background-color: $primary-1;
-      color: $neutrals-1;
-      @include small-tablet {
-        margin: 0 0 1.4em 0;
-        padding: 0.4em 0.6em;
-      }
-    }
-    &--details {
-      @include p(15px, 36px);
-
-      padding: 0.4em 1.6em;
-      border-radius: $radius;
-      border: 1px solid $neutrals-4;
-      background-color: transparent;
     }
   }
 }

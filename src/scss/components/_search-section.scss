@@ -34,30 +34,6 @@
     @include small-tablet {
       @include mr(0);
     }
-
-    &--btn {
-      @include p-bold(18px, 36px);
-
-      position: relative;
-      padding: 0.8em 3em 0.5em 1.4em;
-      border-radius: $radius;
-      background-color: $primary-1;
-      color: $neutrals-1;
-      text-transform: uppercase;
-      &::after {
-        content: "";
-        position: absolute;
-        width: 21px;
-        height: 21px;
-        background-image: url("../img/svg/search-btn.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        right: 15px;
-        top: 50%;
-        transform: translateY(-50%);
-        cursor: pointer;
-      }
-    }
   }
   &__title {
     @include p-bold(18px, 36px);

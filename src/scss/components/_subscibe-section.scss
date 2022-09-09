@@ -18,6 +18,11 @@
     max-width: 600px;
     padding: 0.8em;
   }
+  @include small-tablet {
+    max-width: 450px;
+    padding: 0.8em;
+    gap: 0;
+  }
 
   &__input {
     &--el {
@@ -34,7 +39,7 @@
     border-radius: $radius;
     background-color: $primary-1;
     @include mobile {
-      padding: 0.6em 1em;
+      padding: 0.6em;
     }
 
     &--el {

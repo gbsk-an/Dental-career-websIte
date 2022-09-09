@@ -18,12 +18,22 @@
       @include flex-all-center;
 
       overflow: hidden;
+
+      @include mobile-min {
+        height: 100%;
+        flex-direction: column;
+        align-self: baseline;
+        text-align: center;
+      }
     }
     &--square {
       margin-right: 0.4em;
       border-radius: $radius;
       width: 3.5em;
       height: 3.5em;
+      @include mobile-min {
+        margin: 0;
+      }
     }
     .square-file {
       background-image: url("../img/svg/file.svg");

@@ -5,10 +5,12 @@
   background-image: url("../img/background-1.png");
   background-size: cover;
   background-repeat: no-repeat;
+
   @include small-tablet {
     background-image: none;
   }
-  &__text {
+
+  &--text {
     margin-top: 5em;
     margin-bottom: 9.75em;
 
@@ -23,37 +25,50 @@
       grid-column: span 6;
       margin: 2.5em 0 2em;
     }
+
+    &-title {
+      @include mobile-min {
+        text-align: center;
+      }
+    }
+
+    &-description {
+      @include p(24px, 74px);
+      margin-bottom: 1em;
+      padding-left: 1.6em;
+
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 32px;
+        background-image: url("../img/svg/element_01.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+
+      @include small-tablet {
+        line-height: 28px;
+      }
+      @include tablet {
+        line-height: 33px;
+      }
+      @include mobile-min {
+        margin-bottom: 2em;
+      }
+    }
   }
-
-  &--text {
-    @include p(24px, 74px);
-    margin-bottom: 1em;
-    padding-left: 1.6em;
-
-    position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      width: 20px;
-      height: 32px;
-      background-image: url("../img/svg/element_01.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      cursor: pointer;
-    }
-
-    @include small-tablet {
-      line-height: 28px;
-    }
-    @include tablet {
-      line-height: 33px;
+  &--btns {
+    @include mobile-min {
+      @include flex-all-se;
     }
   }
-
-  &__image {
+  &--image {
     position: absolute;
     transform: translateY(0);
     top: calc(100% - 500px);
@@ -66,21 +81,6 @@
       display: none;
     }
   }
-
-  &--btn1 {
-    @include p(14px, 21px);
-
-    padding: 0.7em 1em;
-    border-radius: $radius;
-    background-color: $neutrals-1;
-  }
-
-  &--btn2 {
-    @include p(14px, 21px);
-
-    padding: 0.7em 1em;
-    color: $neutrals-1;
-  }
 }
 
 .intro {
@@ -90,5 +90,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
+  }
+  @include mobile-min {
+    border-radius: 0;
   }
 }

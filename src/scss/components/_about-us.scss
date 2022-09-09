@@ -19,18 +19,27 @@
       grid-column: span 6;
       text-align: justify;
     }
+    @include mobile-min {
+      padding: 1em;
+    }
+
   }
 
   &__btns {
     grid-column: 6 / span 2;
     margin-bottom: 2.7em;
 
-    @include small-tablet {
-      grid-column: 1 / span 2;
-    }
     @include tablet {
       grid-column: 6 / span 3;
     }
+    @include small-tablet {
+      grid-column: 1 / span 2;
+    }
+    @include mobile-min {
+      grid-column: 3 / span 3;
+    }
+
+
 
     &--btn {
       @include p-med(18px, 36px);

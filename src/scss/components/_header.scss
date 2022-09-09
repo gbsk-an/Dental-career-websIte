@@ -2,6 +2,9 @@
   margin-top: 2.8em;
   margin-bottom: 3.4em;
 
+  @include mobile-min {
+    margin: 1em 0;
+  }
   &__container {
     @include flex-all-sb;
   }
