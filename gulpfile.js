@@ -2,6 +2,7 @@ const {
   src,
   dest,
   series,
+  task,
   watch
 } = require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
@@ -323,11 +324,6 @@ const toProd = (done) => {
   isProd = true;
   done();
 };
-
-function deploy(cb) {
-  ghPages.publish(path.join(process.cwd(), './build'), cb);
-}
-exports.deploy = deploy;
 
 exports.default = series(clean, htmlInclude, scripts, styles, resources, images, webpImages, avifImages, svgSprites, watchFiles);
 
